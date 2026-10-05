@@ -105,7 +105,7 @@ asc review submit --app "APP_ID" --version "1.2.3" --build-id "BUILD_ID" --dry-r
 asc review submit --app "APP_ID" --version "1.2.3" --build-id "BUILD_ID" --confirm
 ```
 
-Use `--version-id "VERSION_ID"` instead of `--version` when the exact version ID is known. `--build-id` is always required and must identify the intended build.
+Use `--version-id "VERSION_ID"` instead of `--version` when the exact version ID is known. Select the build with `--build-id`, or with `--build-number "45"` to skip the build-ID lookup; it matches only builds of that app, version string, and platform. Right after an upload, prefer `--build-number` over `--latest`, which can still pick the previous upload. Add `--wait` to wait for processing before attaching.
 
 ## Upload or build, then publish
 
